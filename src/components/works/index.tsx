@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { useScroll } from 'react-use';
 import './index.less';
 
 const worksData = [
@@ -11,11 +12,24 @@ const worksData = [
     text: 'FreeMusic',
     img: require('@/assets/images/1.jpg'),
   },
+  {
+    name: '电商购物',
+    desc: '一个基于 Flutter 开发的购物 APP 示例项目，可跨端 Android、iOS、Web 使用，支持商品分类展示、购物车、商品数量管理、商品详情展示等功能。',
+    techs: ['flutter', 'dart'],
+    preview: '',
+    github: 'https://github.com/free-dev-gf/market',
+    text: 'Shopping',
+    img: require('@/assets/images/2.jpg'),
+  },
 ];
 
 export default function Works() {
+  const worksRef = useRef<HTMLDivElement>(null);
+  const { y } = useScroll(worksRef);
+  const { clientHeight = 0, scrollHeight = 0 } = worksRef.current || {};
+
   return (
-    <div className="c-works">
+    <div className="c-works" ref={worksRef}>
       {worksData.map((w) => (
         <div key={w.name} className="c-works-item">
           <div className="c-works-item-info">
@@ -56,6 +70,14 @@ export default function Works() {
           </div>
         </div>
       ))}
+      <div
+        className={`c-works-down${
+          scrollHeight - (clientHeight + y) < 100 ? ' toggle' : ''
+        }`}
+      >
+        <img src={require('@/assets/images/down2.svg')} />
+        <img src={require('@/assets/images/down1.svg')} />
+      </div>
     </div>
   );
 }
