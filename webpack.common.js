@@ -48,7 +48,7 @@ export default {
                                         rootValue: 100,
                                         unitPrecision: 4,
                                         exclude:
-                                            /(node_modules)|(src\/components\/.*?(?<!preview)$)|(src\/pages\/index)/,
+                                            /(node_modules)|(src\/components)|(src\/pages\/index)/,
                                     }),
                                 ],
                             },
@@ -111,6 +111,7 @@ export default {
             patterns: [
                 { from: 'static/favicon.ico', to: 'favicon.ico' },
                 { from: 'static/resume.pdf', to: 'resume.pdf' },
+                { from: 'static/website.sh', to: 'website.sh' },
             ],
         }),
     ],

@@ -18,7 +18,7 @@ export default class Preview extends React.Component<IPreviewProps> {
                 {/* @ts-ignore */}
                 <div className="c-preview-video">
                     <div className="c-preview-sub-title">演示视频</div>
-                    <video src={this.props.video} autoPlay muted loop controls />
+                    <video src={this.props.video} autoPlay muted loop controls playsInline />
                 </div>
                 <div className="c-preview-screenshots">
                     <div className="c-preview-sub-title">截图</div>

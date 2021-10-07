@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Preview from '@comp/preview';
+import Preview from '../../preview';
 import video from '@assets/videos/cloudfiles.mp4';
 import img1 from '@assets/screenshots/cloudfiles-1.jpg';
 import img2 from '@assets/screenshots/cloudfiles-2.jpg';
