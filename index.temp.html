@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width"
+        />
+        <title>前端 - 梁高飞</title>
+        <script>
+            const WIDTH = 750;
+            const setView = () => {
+                document.documentElement.style.fontSize =
+                    (100 * screen.width) / WIDTH + 'px';
+            };
+            window.onorientationchange = setView;
+            window.onresize = setView;
+            setView();
+        </script>
+        <style>
+            body,
+            html {
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app"></div>
+    </body>
+</html>

@@ -4,22 +4,31 @@ import './index.less';
 
 const worksData = [
   {
-    name: '自由音乐',
-    desc: '一款桌面音乐应用，可跨端 Windows 和 Mac 使用，支持播放用户本地音乐、创建歌单分组管理、搜索、歌词动效、随机播放、播放队列修改、播放进度音量控制等功能。',
-    techs: ['react', 'electron'],
-    preview: '',
-    github: 'https://github.com/free-dev-gf/free_music',
-    text: 'FreeMusic',
-    img: require('@/assets/images/1.jpg'),
+    name: 'CloudFiles',
+    desc: '一个云端文件管理系统，支持创建账户或 GitHub 登录，支持手机和电脑上传、删除、下载文件，实践了 session、jwt、oauth 等多种登录鉴权技术及 mongodb、redis 等数据存储技术。',
+    techs: ['koa', 'mongodb', 'nuxt', 'vue'],
+    preview: '/cloud-files.html',
+    github: 'https://github.com/free-dev-gf/cloud_files',
+    text: '云文件',
+    img: require('@assets/images/1.jpg'),
   },
   {
-    name: '电商购物',
+    name: 'FreeMusic',
+    desc: '一款桌面音乐应用，可跨端 Windows 和 Mac 使用，支持播放用户本地音乐、创建歌单分组管理、搜索、歌词动效、随机播放、播放队列修改、播放进度音量控制等功能。',
+    techs: ['react', 'electron', 'webpack', 'webAduio', 'nodejs'],
+    preview: '/free-music.html',
+    github: 'https://github.com/free-dev-gf/free_music',
+    text: '音乐',
+    img: require('@assets/images/2.jpg'),
+  },
+  {
+    name: 'Shopping',
     desc: '一个基于 Flutter 开发的购物 APP 示例项目，可跨端 Android、iOS、Web 使用，支持商品分类展示、购物车、商品数量管理、商品详情展示等功能。',
     techs: ['flutter', 'dart'],
-    preview: '',
+    preview: '/shopping.html',
     github: 'https://github.com/free-dev-gf/market',
-    text: 'Shopping',
-    img: require('@/assets/images/2.jpg'),
+    text: '电商购物',
+    img: require('@assets/images/3.jpg'),
   },
 ];
 
@@ -75,8 +84,8 @@ export default function Works() {
           scrollHeight - (clientHeight + y) < 100 ? ' toggle' : ''
         }`}
       >
-        <img src={require('@/assets/images/down2.svg')} />
-        <img src={require('@/assets/images/down1.svg')} />
+        <img src={require('@assets/images/down2.svg')} />
+        <img src={require('@assets/images/down1.svg')} />
       </div>
     </div>
   );
